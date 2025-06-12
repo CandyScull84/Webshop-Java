@@ -65,7 +65,7 @@ cd Webshop-Java
 ]
 }
 ````
-**Exempel på svar:**
+*Exempel på svar:*
 
 ```json
 {
