@@ -1,71 +1,68 @@
-
 # Enkel Webshop Backend – Java + Spring Boot
 
 ## Projektbeskrivning
 
-Detta projekt är en enkel backend för en webshop byggd i Java med Spring Boot. API:et hanterar produktdata och beställningar (orders), lagrar all data i minnet, och erbjuder en solid grund för framtida utveckling (t.ex. frontend, databas, autentisering).
+Detta projekt är en enkel backend för en webshop byggd i Java med Spring Boot. API:et hanterar produktdata och beställningar (orders), lagrar all data i minnet och erbjuder en grund för framtida utveckling (t.ex. frontend, databas, autentisering).
 
 ## Mål
 
-- Skapa ett funktionellt REST API för en webshop
-- Hantera produktdata (lista produkter, visa enskild produkt)
-- Implementera orderhantering (skapa order)
-- Modellera data med objektorienterad programmering (OOP)
-- Använda Java Collections Framework (List, Map) för att lagra data i minnet
-- Implementera felhantering och validering
-- Skriva enhetstester med JUnit
+- REST API för webshop
+- Produkthantering (lista, visa produkt)
+- Orderhantering
+- Objektorienterad programmering (OOP)
+- In-memory lagring med Java Collections
+- Felhantering och validering
+- Enhetstester med JUnit
 
 ## Kom igång
 
-### Bygga och köra projektet
+### 1. Klona projektet:
 
-1. Klona projektet:
-```
+```bash
 git clone https://github.com/CandyScull84/Webshop-Java.git
 cd Webshop-Java
+````
+
+### 2. Starta applikationen:
+
+```bash
+./mvnw spring-boot:run
 ```
-2. Kör applikationen:
+
+### 3. Applikationen körs på:
+
 ```
-./mvnw spring-boot\:run
-```
-3. Applikationen startar på:
-```
-[http://localhost:8080](http://localhost:8080)
+http://localhost:8080
 ```
 
 ## API-endpoints
 
-### Produkthantering
+### Produkter
 
-- `GET /api/products` – Returnerar en lista med alla produkter
-- `GET /api/products/{id}` – Returnerar en specifik produkt baserat på ID
+* `GET /api/products` – Lista alla produkter
+* `GET /api/products/{id}` – Visa en produkt med ID
 
-### Orderhantering
+### Ordrar
 
-- `POST /api/orders` – Tar emot orderdata i JSON-format och returnerar orderbekräftelse
+* `POST /api/orders` – Skapa en order
 
-**Exempel på POST-body (kan användas i Postman):**
+**Exempel (för Postman):**
 
 ```json
 {
-"customerInfo": {
- "name": "Anna Andersson",
- "address": "Testgatan 1",
- "email": "anna@example.com"
-},
-"items": [
- {
-   "productId": 1,
-   "quantity": 2
- },
- {
-   "productId": 2,
-   "quantity": 1
- }
-]
+  "customerInfo": {
+    "name": "Anna Andersson",
+    "address": "Testgatan 1",
+    "email": "anna@example.com"
+  },
+  "items": [
+    { "productId": 1, "quantity": 2 },
+    { "productId": 2, "quantity": 1 }
+  ]
 }
-````
-*Exempel på svar:*
+```
+
+**Svar:**
 
 ```json
 {
@@ -76,25 +73,23 @@ cd Webshop-Java
 
 ## Felhantering
 
-Fel hanteras med egna undantag och en global `@RestControllerAdvice`. Om en produkt inte hittas returneras ett felmeddelande och HTTP 404:
+Om en produkt inte hittas, returneras ett fel:
 
 ```json
 {
-  "error": "Produkt med ID 999 hittades inte."
+  "error": "Produkt med ID 55 hittades inte."
 }
 ```
 
 ## Testning
 
-Projektet innehåller enhetstest för `ProductService` med JUnit 5.
-
-### Så här kör du tester:
+### Så här testar du:
 
 ```bash
 ./mvnw test
 ```
 
-Eller kör i IntelliJ:
+Eller i IntelliJ:
 
 * Högerklicka på `ProductServiceTest.java`
 * Välj **Run 'ProductServiceTest'**
@@ -103,51 +98,47 @@ Eller kör i IntelliJ:
 
 ```
 com.example.webshop
-├── controller        # REST Controllers
-├── exception         # Egna undantag och global felhantering
-├── model             # Datamodeller (Product, Order, osv.)
-├── repository        # In-memory lagring med List & Map
-└──service           # Affärslogik
- ```
-## Teknikstack
+├── controller       # REST API
+├── service          # Affärslogik
+├── repository       # Lagring (List & Map)
+├── model            # Datamodeller
+└── exception        # Felhantering
+```
+
+## Teknik
 
 * Java 17
 * Spring Boot 3.5
 * Maven
 * Spring Web
+* JSON (Jackson)
 * JUnit 5
-* JSON (via Jackson)
-* In-memory storage (Map & List)
 
-## ✅ Funktionalitet – Sammanfattning
+## Funktionalitet
 
-* [x] `GET /api/products` – lista produkter
-* [x] `GET /api/products/{id}` – visa produkt
-* [x] `POST /api/orders` – skapa order
-* [x] In-memory-lagring
-* [x] Validering och felhantering
-* [x] Enhetstest med JUnit
-* [x] README med körinstruktioner, Postman-exempel, API-info
+* Lista produkter
+* Visa produkt
+* Skapa order
+* Validering och felhantering
+* Enhetstest
+* README
 
+## Framtida utveckling
 
-## Möjlig framtida utveckling
-
-Just nu innehåller projektet bara backend (alltså bara det som körs i bakgrunden och hanterar data).  
-Men systemet är byggt så att man lätt skulle kunna bygga vidare med:
-
-- En webbsida (t.ex. med React) där kunden kan se produkter och beställa
-- En riktig databas (t.ex. H2 eller PostgreSQL) för att spara produkter och ordrar permanent
-- Inloggning så att kunder kan logga in och se sina tidigare beställningar
-- Bättre sätt att skicka och ta emot data i API:et (med något som kallas DTO)
-
+* Frontend med React
+* Databas (H2, PostgreSQL)
+* Inloggning för kunder
+* DTO-klasser för tydligare datamodeller
 
 ## Inlämning
 
-* Projektet är publicerat på GitHub:
-  [https://github.com/CandyScull84/Webshop-Java](https://github.com/CandyScull84/Webshop-Java)
+Projektet finns på GitHub:
+[https://github.com/CandyScull84/Webshop-Java](https://github.com/CandyScull84/Webshop-Java)
 
-* Denna README innehåller:
+Denna README innehåller:
 
-  * [x] Instruktioner för att bygga och köra
-  * [x] API-dokumentation
-  * [x] Testinstruktioner för terminal & Postman
+* Instruktioner
+* API-beskrivning
+* Testexempel (Postman, terminal)
+
+```
