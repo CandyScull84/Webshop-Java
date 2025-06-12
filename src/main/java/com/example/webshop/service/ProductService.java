@@ -3,7 +3,7 @@ package com.example.webshop.service;
 import com.example.webshop.model.Product;
 import com.example.webshop.repository.ProductRepository;
 import org.springframework.stereotype.Service;
-
+import com.example.webshop.exception.ProductNotFoundException;
 import java.util.List;
 
 @Service
@@ -21,6 +21,7 @@ public class ProductService {
 
     public Product getProductById(Long id) {
         return productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Produkt med ID " + id + " hittades inte"));
+                .orElseThrow(() -> new ProductNotFoundException(id));
+
     }
 }

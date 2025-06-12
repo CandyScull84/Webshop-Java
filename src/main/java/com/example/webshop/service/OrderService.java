@@ -4,6 +4,7 @@ import com.example.webshop.model.*;
 import com.example.webshop.repository.OrderRepository;
 import com.example.webshop.repository.ProductRepository;
 import org.springframework.stereotype.Service;
+import com.example.webshop.exception.ProductNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,9 @@ public class OrderService {
 
         for (OrderItem item : requestedItems) {
             Product product = productRepository.findById(item.getProductId())
-                    .orElseThrow(() -> new RuntimeException("Produkt med ID " + item.getProductId() + " finns inte"));
+                    .orElseThrow(() -> new ProductNotFoundException(item.getProductId()));
+
+
 
             double price = product.getPrice();
             int quantity = item.getQuantity();
