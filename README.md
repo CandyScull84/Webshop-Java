@@ -1,9 +1,10 @@
 
 # Enkel Webshop Backend – Java + Spring Boot
 
-Projektbeskrivning
+## Projektbeskrivning
 
 Detta projekt är en enkel backend för en webshop byggd i Java med Spring Boot. API:et hanterar produktdata och beställningar (orders), lagrar all data i minnet, och erbjuder en solid grund för framtida utveckling (t.ex. frontend, databas, autentisering).
+
 ## Mål
 
 - Skapa ett funktionellt REST API för en webshop
@@ -14,13 +15,13 @@ Detta projekt är en enkel backend för en webshop byggd i Java med Spring Boot.
 - Implementera felhantering och validering
 - Skriva enhetstester med JUnit
 
-## 🚀 Kom igång
+## Kom igång
 
-### 🔧 Bygga och köra projektet
+### Bygga och köra projektet
 
 1. Klona projektet:
 ```
-git clone [https://github.com/CandyScull84/Webshop-Java.git](https://github.com/CandyScull84/Webshop-Java.git)
+git clone https://github.com/CandyScull84/Webshop-Java.git
 cd Webshop-Java
 ```
 2. Kör applikationen:
@@ -108,18 +109,6 @@ com.example.webshop
 ├── repository        # In-memory lagring med List & Map
 └──service           # Affärslogik
  ```
-
-## Kurskoppling
-
-Detta projekt bygger på följande kursmoment:
-
-* Föreläsning 1–3: Grundläggande Java och OOP
-* Föreläsning 2, 4: Collections och Arrays
-* Föreläsning 5: Undantagshantering
-* Föreläsning 7–8: Spring Boot & REST
-* Föreläsning 8: JSON i Spring
-* Föreläsning 10: Enhetstestning med JUnit
-
 ## Teknikstack
 
 * Java 17
@@ -159,8 +148,6 @@ Men systemet är byggt så att man lätt skulle kunna bygga vidare med:
 
 * Denna README innehåller:
 
-    * [x] Instruktioner för att bygga och köra
-    * [x] API-dokumentation
-    * [x] Testinstruktioner för terminal & Postman
-
-
+  * [x] Instruktioner för att bygga och köra
+  * [x] API-dokumentation
+  * [x] Testinstruktioner för terminal & Postman
