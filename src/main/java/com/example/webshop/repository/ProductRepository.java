@@ -17,7 +17,7 @@ public class ProductRepository {
                 "Laptop",
                 "Kraftfull bärbar dator med hög prestanda",
                 12500,
-                "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+                "https://freepngdownload.com/image/laptop-png-free-download-30.png",
                 5
         ));
 
@@ -26,7 +26,7 @@ public class ProductRepository {
                 "Mus",
                 "Trådlös optisk mus med ergonomisk design",
                 250,
-                "https://upload.wikimedia.org/wikipedia/commons/7/71/Logitech-wireless-mouse.jpg",
+                "https://freepngdownload.com/image/thumb/computer-mouse-png-free-download-27.png",
                 15
         ));
 
@@ -35,7 +35,7 @@ public class ProductRepository {
                 "Tangentbord",
                 "Tyst mekaniskt tangentbord med bakgrundsbelysning",
                 650,
-                "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+                "https://freepngdownload.com/image/key-board-png-free-download-21.png",
                 5
         ));
 
@@ -44,7 +44,7 @@ public class ProductRepository {
                 "Kontorsstol",
                 "Ergonomisk kontorsstol med justerbart ryggstöd",
                 2450,
-                "https://upload.wikimedia.org/wikipedia/commons/1/12/Office_chair.jpg",
+                "https://freepngdownload.com/image/chair-png-free-image-download-28.png",
                 5
         ));
 
@@ -53,9 +53,11 @@ public class ProductRepository {
                 "Hörlurar",
                 "Trådlösa over-ear hörlurar med brusreducering",
                 890,
-                "https://images.unsplash.com/photo-1580894908361-967195033215",
+                "https://freepngdownload.com/image/head-phones-png-free-image-download-3.png",
                 10
         ));
+
+
 
 
     }
