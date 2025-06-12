@@ -1,8 +1,9 @@
 
-# 🛒 Enkel Webshop Backend – Java + Spring Boot
+# Enkel Webshop Backend – Java + Spring Boot
 
-Detta är ett projektarbete där du bygger backend-systemet för en enkel webshop med Java och Spring Boot. Applikationen tillhandahåller ett REST API för att hantera produkter och ordrar, och all data lagras i minnet med hjälp av Java Collections. Systemet är byggt med objektorienterad programmering (OOP) och följer best practice enligt kursens första 10 föreläsningar.
+Projektbeskrivning
 
+Detta projekt är en enkel backend för en webshop byggd i Java med Spring Boot. API:et hanterar produktdata och beställningar (orders), lagrar all data i minnet, och erbjuder en solid grund för framtida utveckling (t.ex. frontend, databas, autentisering).
 ## Mål
 
 - Skapa ett funktionellt REST API för en webshop
