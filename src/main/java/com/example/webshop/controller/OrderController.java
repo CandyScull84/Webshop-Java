@@ -29,13 +29,11 @@ public class OrderController {
         );
     }
 
-    // ✅ Ny metod för att hämta alla ordrar
     @GetMapping
     public List<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
 
-    // Intern hjälpklass (kan flyttas till dto/OrderRequest.java)
     public static class OrderRequest {
         private CustomerInfo customerInfo;
         private List<OrderItem> items;

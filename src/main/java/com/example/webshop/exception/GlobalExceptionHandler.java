@@ -12,5 +12,4 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
-    // Här kan du lägga till fler feltyper senare
 }
